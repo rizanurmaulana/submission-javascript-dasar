@@ -1,15 +1,8 @@
 function fibonacci(n) {
-  const result = [];
-  for (let i = 0; i <= n; i++) {
-    if (i === 0) {
-      result.push(0);
-    } else if (i === 1) {
-      result.push(1);
-    } else {
-      result.push(result[i - 1] + result[i - 2]);
-    }
+  if (n <= 1) {
+    return n;
   }
-  return result;
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 // Jangan hapus kode di bawah ini!

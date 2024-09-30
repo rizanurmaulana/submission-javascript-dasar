@@ -9,12 +9,11 @@ let orders = [];
 // TODO: selesaikan fungsi addOrder
 function addOrder(customerName, items) {
   const id = generateUniqueId();
-  const listItems = JSON.stringify(items);
   const totalPrice = items.reduce((sum, item) => sum + item.price, 0);
   const order = {
     id,
     customerName,
-    items: listItems,
+    items,
     totalPrice,
     status: "Menunggu",
   };
